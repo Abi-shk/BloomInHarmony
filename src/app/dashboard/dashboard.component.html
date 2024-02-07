@@ -1,0 +1,45 @@
+
+<div class="container">
+    
+    <div class="posts">
+        <div class="post" *ngFor="let i of mypost">
+            <div class="imgContainer">
+                <img src={{i.image}} alt="" width="200" height="200" />
+            </div>
+            <h2 class="postTitle">{{i.title}}</h2>
+            <button class="delete" (click)="deletepost(i._id)">delete</button>
+        </div>
+    </div>
+    <form class="new" (ngSubmit)="createPost()" [formGroup]="postForm" >
+        <h1>Add New Post</h1>
+        <input formControlName="title" type="text" placeholder="Title" class="input" />
+        <div *ngIf="this.postForm.get('title')?.errors && this.postForm.get('title')?.touched">
+            <p class="text-danger text-center">Invalid</p>
+        </div>
+        <input formControlName="desc" type="text" placeholder="Desc" class="input" />
+        <div *ngIf="this.postForm.get('desc')?.errors && this.postForm.get('desc')?.touched">
+            <p class="text-danger text-center"> Invalid</p>
+        </div>
+        <input formControlName="image" type="text" placeholder="Image link" class="input" />
+        <div *ngIf="this.postForm.get('image')?.errors && this.postForm.get('image')?.touched">
+            <p class="text-danger text-center"> Invalid</p>
+        </div>
+        <label class="label" for="">what is this post about?</label>
+        <select formControlName="type" class="input">
+            <option value="seed">About Seed</option>
+            <option value="plant">About Plant</option>
+        </select>
+        <div *ngIf="this.postForm.get('type')?.errors && this.postForm.get('type')?.touched">
+            <p class="text-danger text-center"> Invalid</p>
+        </div>
+        <textarea
+            placeholder="Content"
+            class="textArea"
+            formControlName="content"
+            cols="30"
+            rows="10"
+        ></textarea>
+        <button class="button">Create Post</button>
+    </form>
+</div>
+

@@ -1,0 +1,13 @@
+footer {
+    text-align: center;
+    padding: 10px;
+    color: blanchedalmond;
+    margin-top: 10px;
+    
+}
+
+@media screen and (max-width: 768px) {
+    footer {
+        padding: 10px 0; 
+    }
+}

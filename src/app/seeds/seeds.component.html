@@ -1,0 +1,13 @@
+<div class="posts">
+    <div class="post" *ngFor="let i of seed">
+        <div class="imgContainer">
+            <img src={{i.image}} alt="" width="300" height="200" />
+        </div>
+        <div class="desc">
+            <h2 class="postTitle"> {{i.title}} </h2>
+            <h4>UserName : {{i.name}}</h4>
+            <p>{{i.desc}}</p>
+            <p>{{i.content}}</p>
+        </div>
+    </div>
+</div>

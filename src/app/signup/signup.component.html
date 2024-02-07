@@ -1,0 +1,41 @@
+<div class="main">
+    <div class="container">
+        <form [formGroup]="signupForm" class="login-form">
+            <h1>Sign Up</h1>
+            <div class="form-group">
+                <input formControlName="email" type="text" id="email" name="email" placeholder="Enter Your Email " required>
+            </div>
+            <div *ngIf="this.signupForm.get('email')?.errors && this.signupForm.get('email')?.touched">
+                <p class="text-danger text-center ">Accept Only Numbers</p>
+            </div>
+            <div class="form-group">
+                
+                <input formControlName="name" type="text" id="username" name="username" placeholder="Enter Your Username" required>
+            </div>
+            <div *ngIf="this.signupForm.get('name')?.errors && this.signupForm.get('name')?.touched">
+                <p class="text-danger text-center">Please Include Characters And Numbers Only</p>
+            </div>
+            <div class="form-group">
+                
+                <input formControlName="psw" type="password" id="password" name="password" placeholder="Enter Password" required>
+            </div>
+            <div *ngIf="this.signupForm.get('psw')?.errors && this.signupForm.get('psw')?.touched">
+                <p class="text-danger text-center">Please Include Characters And Numbers Only</p>
+            </div>
+          
+            <div class="form-group">
+                
+                <input formControlName="cpsw"  type="password" id="confirm-password" name="password" placeholder="Confirm Password" required>
+            </div>
+            <div *ngIf="pswCheck">
+                <p class="text-danger text-center " >Password Doesn't Match</p>
+            </div>
+
+            <div class="form-group">
+                <button (click)="signup()" type="submit">SignUp</button>
+            </div>
+
+        </form>
+      
+    </div>
+    </div>

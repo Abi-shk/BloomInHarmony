@@ -1,0 +1,26 @@
+<nav class="navbar">
+  <div class="container">
+      <a href="#" class="logo">BloomInHarmony</a>
+      <div class="mobile-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+      </div>
+     <div>
+        <ul class="nav-links" >
+          <li><a href="#">Home</a></li>
+          <li><a href="app-portfolio">Blogs</a></li>
+          <li *ngIf="!isLoggedIn()"><a href="app-signup">Join Us</a></li>
+          <li *ngIf="isLoggedIn()"><a href="app-dashboard">Dashboard</a></li>
+          <li><a href="app-about">About Us</a></li>
+          <li *ngIf="!isLoggedIn()"><a href="app-admin">Login</a></li>
+          <li *ngIf="isLoggedIn()" ><a (click)="logout()" href="">logOut</a></li>
+      </ul>
+    </div> 
+     
+     
+     
+  </div>
+</nav>
+
+

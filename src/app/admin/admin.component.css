@@ -1,0 +1,63 @@
+
+.container {
+    width: 400px;
+    background-color: #05000000;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+    padding: 20px;
+}
+.container:hover{
+    background-color: #050000b0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.896);
+
+}
+
+.login-form h2 {
+    text-align: center;
+    color: rgb(241, 241, 244);
+}
+
+.form-group {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 15px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+.main{
+    width: 100%;
+    height: 85vh;
+    background-color: rgba(0, 0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://i.postimg.cc/t4QkbZm8/424-4244508-tree-landscape-nature-drawing-nature-png-images-free-removebg.png');
+    background-repeat: no-repeat;
+    background-size: auto;
+    
+}
+.createac{
+    text-align: center;
+    color: aqua;
+
+}
